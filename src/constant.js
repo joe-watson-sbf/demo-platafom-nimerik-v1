@@ -10,6 +10,7 @@ export const modelImage = 'assets/images/ananas.png'
 export const dataEgzesisLeti = {
     title: 'Klike sou yon imaj ki kòmanse ak son ',
     opsyon: 'a',
+    audio: "etk1",
     dataList: [
 
         {
