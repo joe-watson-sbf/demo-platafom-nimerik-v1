@@ -1,6 +1,7 @@
 import React from 'react'
 import { dataEgzesisLeti } from '../../constant'
 import ImajEgzesis from '../../components/ImajEgzesis';
+import { getAudio } from '../../helpers/helper';
 
 const EgzesisLekti = () => {
 
@@ -26,7 +27,9 @@ const EgzesisLekti = () => {
             <div className='flex flex-col gap-4 px-5 mb-8'>
                 <div className='p-4  border mb-4 text-center rounded'>
                     <h1 className='text-2xl text-gray-600'> {egzesis.title} [ {opsyon.toLocaleUpperCase()} ] </h1>
+                    <audio className='audio-element' src={getAudio(egzesis.audio)} controls autoplay/>
                 </div>
+                
 
                 <div className='flex md:flex-row flex-col gap-4'>
 

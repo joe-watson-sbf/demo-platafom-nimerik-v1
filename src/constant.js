@@ -2,12 +2,15 @@ export const imageUrl1 = 'https://i.picsum.photos/id/20/3670/2462.jpg?hmac=CmQ0l
 const imageUrl2 = 'https://plus.unsplash.com/premium_photo-1663108237864-da30e09faab8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80'
 const imageUrl3 = 'https://images.unsplash.com/photo-1602542165232-0b7f56fe660a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3032&q=80'
 
+
+
 export const modelImage = 'assets/images/ananas.png'
 
 
 export const dataEgzesisLeti = {
     title: 'Klike sou yon imaj ki kòmanse ak son ',
     opsyon: 'a',
+    audio: "etk1",
     dataList: [
 
         {
