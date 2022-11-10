@@ -16,12 +16,15 @@ const App = () => {
     const RequireAuth = ({ children }) => {
         return currentUser ? children : <Navigate to={"/login"} />;
     };
+
+    
     return (
         <div>
             <BrowserRouter>
                 <Routes>
 
                     <Route path='/login' element={<Login />} />
+                    <Route path='*' element={<Login />} />
                     <Route path='' element={<RequireAuth>  <Home /> </RequireAuth>} />
                     <Route path='1e-af'>
                         <Route index element={<RequireAuth> <JenerikPaj btnText={'Al Nan Klas La'} kle={'matye'} displayColumn title='MATYÈ YO' klas={'1e AF'} /> </RequireAuth> } />

@@ -6,8 +6,8 @@ import { AuthContext } from '../context/AuthContext'
 export const CTASection = ({ title, subTitle }) => {
     const { dispatch } = useContext(AuthContext)
     const navigate = useNavigate()
-    const date = new Date().toLocaleString()
-    const salitasyon = date.includes('PM') ? 'Bonswa,' : 'Bonjou,'
+    /* const date = new Date().toLocaleString()
+    const salitasyon = date.includes('PM') ? 'Bonswa,' : 'Bonjou,' */
 
     const pathName = window.location.pathname
 
@@ -26,7 +26,7 @@ export const CTASection = ({ title, subTitle }) => {
         <div className="bg-gray-800 sm:h-40 h-50 sm:text-justify drop-shadow-md sm:mb-28 mb-16">
             <div className="mx-auto max-w-7xl flex justify-between flex-wrap py-8 px-4 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-10 lg:px-8">
                 <h2 className="text-3xl font-bold tracking-tight text-gray-400 sm:text-4xl">
-                    <span className="block">{salitasyon + ' ' + title} </span>
+                    {/* <span className="block">{salitasyon + ' ' + title} </span> */}
                     <span className="block text-yellow-600">{subTitle}</span>
                 </h2>
 

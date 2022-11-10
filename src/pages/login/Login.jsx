@@ -10,7 +10,7 @@ const Login = () => {
     const { dispatch,  currentUser } = useContext(AuthContext)
     const navigate = useNavigate()
     const [email, setEmail] = React.useState('Rantre kourye elektronik ou...')
-    const [password, setPassword] = React.useState('000000000000000')
+    const [password, setPassword] = React.useState('00000000')
 
 
     useEffect(() => {
@@ -21,7 +21,7 @@ const Login = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault()
-        console.log({ email, password })
+        
         if (email === user.email && password === user.password) {
             dispatch({
                 type: 'LOGIN',

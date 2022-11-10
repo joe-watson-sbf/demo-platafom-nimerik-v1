@@ -1,5 +1,5 @@
 {
-  "name": "platfom-nimerik",
+  "name": "platfom-nimerik-demo",
   "homepage": "https://joe-watson-sbf.github.io/platfom-nimerik",
   "version": "0.1.0",
   "private": true,
@@ -16,7 +16,6 @@
     "web-vitals": "^3.0.4"
   },
   "scripts": {
-    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
