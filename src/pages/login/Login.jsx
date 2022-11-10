@@ -4,7 +4,7 @@ import LoginIcon from '../../assets/svgs/undraw_education_f8ru.svg'
 import { AuthContext } from '../../context/AuthContext'
 import LoginIcon1 from '../../assets/svgs/undraw_secure_login_pdn4.svg'
 
-const user = {email:'admin@test.com', password:'testadmin'}
+const user = {email:'admin@test.com', password:'testadmin22'}
 const Login = () => {
 
     const { dispatch,  currentUser } = useContext(AuthContext)
@@ -12,6 +12,10 @@ const Login = () => {
     const [email, setEmail] = React.useState('Rantre kourye elektronik ou...')
     const [password, setPassword] = React.useState('00000000')
 
+    const [error, setError] = React.useState({
+        email:false,
+        password:false
+    })
 
     useEffect(() => {
         if (currentUser) {
@@ -21,7 +25,10 @@ const Login = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault()
+        console.log(email, password)
         
+        password !== user.password ? setError({...error, password:true}) : setError({...error, password:false})
+        email !== user.email ? setError({...error, email:true}) : setError({...error, email:false})
         if (email === user.email && password === user.password) {
             dispatch({
                 type: 'LOGIN',
@@ -54,9 +61,8 @@ const Login = () => {
                             <input type="email" 
                                 required
                                 onChange={e => setEmail(e.target.value)} 
-                                
-                                
                                 className=" p-2 rounded-full bg-transparent border text-gray-400 focus:bg-transparent focus:text-gray-300 border-gray-400 w-full px-3" />
+                            {error.email && <p className="text-red-500 m-1 p-3 rounded-md text-xs italic">Email la enkòrèk</p>}
                         </label>
 
                         <label className="block w-full mt-2">
@@ -64,10 +70,10 @@ const Login = () => {
                                 Rantre modpas ou
                             </span>
                             <input type="password" 
-                                onChange={e => setPassword(e.target.value)} 
-                                
+                                onChange={e => setPassword(e.target.value)}
                                 required
                                 className=" p-2 rounded-full w-full px-3 bg-transparent border text-gray-400 focus:bg-transparent focus:text-gray-300 border-gray-400" />
+                            {error.password && <p className="text-red-500 m-1 p-3 rounded-md text-xs italic">Modpas la enkòrèk</p>}
                         </label>
 
                         <div className='mb-4 mt-8 flex justify-center items-center'>
