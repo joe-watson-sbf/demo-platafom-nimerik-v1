@@ -2,6 +2,7 @@ import React from 'react'
 import { listKlasYo } from '../../constant'
 import { Link, useNavigate } from 'react-router-dom'
 import { CTASection } from '../../components/CTASection'
+import { getImage } from '../../helpers/helper'
 
 const JenerikPaj = ({ kle, title, displayColumn = false, klas, btnText , children}) => {
 
@@ -23,13 +24,13 @@ const JenerikPaj = ({ kle, title, displayColumn = false, klas, btnText , childre
                     { kle && listKlasYo()[kle].map((data, index) => {
                             return (
                                 <div className='card' key={index} onClick={() => handleClick(data.path)}>
-                                    {!displayColumn && <img src={data.image} alt={'image ' + index} />}
+                                    {!displayColumn && <img src={getImage(`${index+1}af`, "jpg")}  alt={'image ' + index} />}
                                     
                                     {displayColumn &&
                                         <div className='content'>
 
                                             <div className='box-image'>
-                                                <img src={data.image} alt={'image ' + index} />
+                                                <img src={getImage(`${index+1}af`, "jpg")} alt={'image ' + index} />
                                             </div>
                                             <div className='box-text'>
                                                 <h1>{data.name}</h1>
