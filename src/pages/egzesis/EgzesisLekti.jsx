@@ -3,6 +3,7 @@ import { dataEgzesisLeti } from '../../constant'
 import ImajEgzesis from '../../components/ImajEgzesis';
 import { getAudio } from '../../helpers/helper';
 
+
 const EgzesisLekti = () => {
 
     const egzesis = dataEgzesisLeti;
@@ -12,14 +13,33 @@ const EgzesisLekti = () => {
     const [repons, setReponse] = React.useState({ bon: 0, move: 0 });
 
 
-    const handleResponse = (rezilta, id) => {
+    const handleResult = (rezilta, id) => {
+       handleResponse(rezilta, id);
+    }
 
-        if(!chwaIds.includes(id)) {
+     
+
+    const handleResponse = (rezilta, id) => {
+        
+        if(!checkIfChoiceAlreadyExist(id)) {
+
             setChwaIds([...chwaIds, id]);
+
+            rezilta && new Audio(getAudio('yey')).play();
+            !rezilta && new Audio(getAudio('wrong')).play();
+
             rezilta && setReponse({...repons, bon: (repons.bon + 1)});
             !rezilta && setReponse({...repons, move: (repons.move + 1)});
         }
     }
+
+
+    
+
+    const checkIfChoiceAlreadyExist = (id) => {
+        return chwaIds.includes(id);
+    }
+
 
     return (
         <div className='container'>
@@ -27,7 +47,7 @@ const EgzesisLekti = () => {
             <div className='flex flex-col gap-4 px-5 mb-8'>
                 <div className='p-4  border mb-4 text-center rounded'>
                     <h1 className='text-2xl text-gray-600'> {egzesis.title} [ {opsyon.toLocaleUpperCase()} ] </h1>
-                    <audio className='audio-element' src={getAudio(egzesis.audio)} controls autoplay/>
+                    <audio className='audio-element' src={getAudio(egzesis.audio)} controls autoPlay/>
                 </div>
                 
 
@@ -37,7 +57,7 @@ const EgzesisLekti = () => {
                         <div className='grid md:grid-cols-3 grid-cols-2 justify-items-center flex-wrap md:gap-4 gap-3'>
                             {egzesis.dataList.map((data, index) => {
                                 return (
-                                    <ImajEgzesis key={index} handleResult={handleResponse} data={data} opsyon={opsyon}/>
+                                    <ImajEgzesis key={index} handleResult={handleResult} data={data} opsyon={opsyon}/>
                                 )
                             })
                             }
