@@ -1,8 +1,6 @@
 # PLATFÒM NIMERIK
 
-## DEMO 
-
-    [https://joe-watson-sbf.github.io/platfom-nimerik/](Platfòm Nimerik - Demo)
+# [Demo Platfòm Nimerik](https://joe-watson-sbf.github.io/platfom-nimerik)
 
  ## Email 
     
@@ -11,11 +9,3 @@
 ## Password
 
         testadmin22
-
-
-
-
-## DEVELOPER
-
-    - @joe-watson-sbf
-    
