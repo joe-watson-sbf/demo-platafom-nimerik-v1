@@ -1,5 +1,5 @@
 import React from 'react'
-import { listKlasYo } from '../../constant'
+import { baseURL, listKlasYo } from '../../constant'
 import { Link, useNavigate } from 'react-router-dom'
 import { CTASection } from '../../components/CTASection'
 import { getImage } from '../../helpers/helper'
@@ -8,7 +8,7 @@ const JenerikPaj = ({ kle, title, displayColumn = false, klas, btnText , childre
 
     const navigate = useNavigate()
     const handleClick = (path) => {
-        !displayColumn && navigate(path)
+        !displayColumn && navigate(baseURL + path)
     }
 
     return (
