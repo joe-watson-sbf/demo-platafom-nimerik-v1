@@ -4,6 +4,7 @@ const imageUrl3 = 'https://images.unsplash.com/photo-1602542165232-0b7f56fe660a?
 
 export const modelImage = 'assets/images/ananas.png'
 
+
 export const dataEgzesisLeti = {
     title: 'Klike sou yon imaj ki kòmanse ak son ',
     opsyon: 'a',

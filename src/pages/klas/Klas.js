@@ -10,8 +10,6 @@ const Klas = ({key='matye'}) => {
         navigate(path)
     }
 
-   console.log(listKlasYo())
-
     return (
         <div className='container'>
             <h1> KLAS YO </h1>

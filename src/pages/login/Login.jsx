@@ -4,7 +4,7 @@ import LoginIcon from '../../assets/svgs/undraw_education_f8ru.svg'
 import { AuthContext } from '../../context/AuthContext'
 import LoginIcon1 from '../../assets/svgs/undraw_secure_login_pdn4.svg'
 
-const user = {email:'admin@test.com', password:'testadmin22'}
+const user = {email:'admin@test.com', password:'testadmin'}
 const Login = () => {
 
     const { dispatch,  currentUser } = useContext(AuthContext)
