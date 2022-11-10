@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/demo-platafom-nimerik-v1/static/css/main.fed0c24c.css",
-    "main.js": "/demo-platafom-nimerik-v1/static/js/main.bd368247.js",
+    "main.css": "/demo-platafom-nimerik-v1/static/css/main.69a57f55.css",
+    "main.js": "/demo-platafom-nimerik-v1/static/js/main.1c62758c.js",
     "static/media/paj.png": "/demo-platafom-nimerik-v1/static/media/paj.3110e142396353ecc4ed.png",
     "static/media/aplikate.png": "/demo-platafom-nimerik-v1/static/media/aplikate.8043d61e36590e4c3ed1.png",
     "static/media/pilon.png": "/demo-platafom-nimerik-v1/static/media/pilon.09261855131b60ec45b6.png",
@@ -11,11 +11,11 @@
     "static/media/undraw_secure_login_pdn4.svg": "/demo-platafom-nimerik-v1/static/media/undraw_secure_login_pdn4.8cdbc08c50b9cfcbefde2ae77fd58826.svg",
     "static/media/undraw_education_f8ru.svg": "/demo-platafom-nimerik-v1/static/media/undraw_education_f8ru.ad790cae24544e811a4dfa8421427131.svg",
     "index.html": "/demo-platafom-nimerik-v1/index.html",
-    "main.fed0c24c.css.map": "/demo-platafom-nimerik-v1/static/css/main.fed0c24c.css.map",
-    "main.bd368247.js.map": "/demo-platafom-nimerik-v1/static/js/main.bd368247.js.map"
+    "main.69a57f55.css.map": "/demo-platafom-nimerik-v1/static/css/main.69a57f55.css.map",
+    "main.1c62758c.js.map": "/demo-platafom-nimerik-v1/static/js/main.1c62758c.js.map"
   },
   "entrypoints": [
-    "static/css/main.fed0c24c.css",
-    "static/js/main.bd368247.js"
+    "static/css/main.69a57f55.css",
+    "static/js/main.1c62758c.js"
   ]
 }
