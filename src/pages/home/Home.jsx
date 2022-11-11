@@ -16,7 +16,7 @@ const Home = ({ quantity = 6 }) => {
     return (
         <section>
             <CTASection title={'Bòs Ti Pyè'} subTitle='Byenvini sou platfòm nan'/>
-            <div className='container'>
+            <div className='container -m-6'>
 
                 <div className='cards-grid-rows'>
                     {

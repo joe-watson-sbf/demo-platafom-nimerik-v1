@@ -7,50 +7,204 @@ const imageUrl3 = 'https://images.unsplash.com/photo-1602542165232-0b7f56fe660a?
 export const modelImage = 'assets/images/ananas.png'
 export const baseURL = '/demo-platafom-nimerik-v1'
 
-export const dataEgzesisLeti = {
-    title: 'Klike sou yon imaj ki kòmanse ak son ',
-    opsyon: 'a',
-    audio: "etk1",
-    dataList: [
+export const dataEgzesisLeti = [
+    {
+        title: 'Klike sou yon imaj ki kòmanse ak son [ A, a]',
+        opsyon: 'a',
+        etap: 'DEKOUVÈT',
+        audio: "etk1",
+        akBoul: false,
+        akAudio: true,
+        id: 1,
+        dataList: [
+            {
+                id: 1,
+                name: "ananas",
+                akImaj: true,
+                description: "lorem ipsum",
+                correctOption: (name, x) => name.startsWith(x)
+            },
+            {
+                id: 2,
+                name: "aplikate",
+                akImaj: true,
+                description: "lorem ipsum",
+                correctOption: (name, x) => name.startsWith(x)
+            },
+            {
+                id: 3,
+                name: "pilon",
+                akImaj: true,
+                description: "lorem ipsum",
+                correctOption: (name, x) => name.startsWith(x)
+            },
+            {
+                id: 4,
+                name: "aranso",
+                akImaj: true,
+                description: "lorem ipsum",
+                correctOption: (name, x) => name.startsWith(x)
+            },
+            {
+                id: 5,
+                name: "avyon",
+                akImaj: true,
+                description: "lorem ipsum",
+                correctOption: (name, x) => name.startsWith(x)
+            },
+            {
+                id: 6,
+                name: "paj",
+                akImaj: true,
+                description: "lorem ipsum",
+                correctOption: (name, x) => name.startsWith(x)
+            },
+        ]
+    },
+    {
+        title: 'Klike sou tout mo ki gen lèt [ A, a ] nan yon',
+        opsyon: 'a',
+        audio: "etk1",
+        etap: 'RANFÒSMAN',
+        akBoul: false,
+        akAudio: false,
+        id: 2,
+        dataList: [
 
-        {
-            id: 1,
-            name: "ananas",
-            description: "lorem ipsum",
-            correctOption: (name, x) => name.startsWith(x)
-        },
-        {
-            id: 2,
-            name: "aplikate",
-            description: "lorem ipsum",
-            correctOption: (name, x) => name.startsWith(x)
-        },
-        {
-            id: 3,
-            name: "pilon",
-            description: "lorem ipsum",
-            correctOption: (name, x) => name.startsWith(x)
-        },
-        {
-            id: 4,
-            name: "aranso",
-            description: "lorem ipsum",
-            correctOption: (name, x) => name.startsWith(x)
-        },
-        {
-            id: 5,
-            name: "avyon",
-            description: "lorem ipsum",
-            correctOption: (name, x) => name.startsWith(x)
-        },
-        {
-            id: 6,
-            name: "paj",
-            description: "lorem ipsum",
-            correctOption: (name, x) => name.startsWith(x)
-        },
-    ]
-}
+            {
+                id: 1,
+                name: "digo",
+                akImaj: false,
+                description: "lorem ipsum",
+                correctOption: (name, x) => name.includes(x)
+            },
+            {
+                id: 2,
+                name: "machin",
+                akImaj: false,
+                description: "lorem ipsum",
+                correctOption: (name, x) => name.includes(x)
+            },
+            {
+                id: 3,
+                name: "zonyon",
+                akImaj: false,
+                description: "lorem ipsum",
+                correctOption: (name, x) => name.includes(x)
+            },
+            {
+                id: 4,
+                name: "aline",
+                akImaj: false,
+                description: "lorem ipsum",
+                correctOption: (name, x) => name.includes(x)
+            },
+            {
+                id: 5,
+                name: "papye",
+                akImaj: false,
+                description: "lorem ipsum",
+                correctOption: (name, x) => name.includes(x)
+            },
+            {
+                id: 6,
+                name: "jou",
+                akImaj: false,
+                description: "lorem ipsum",
+                correctOption: (name, x) => name.includes(x)
+            },
+            {
+                id: 7,
+                name: "pale",
+                akImaj: false,
+                description: "lorem ipsum",
+                correctOption: (name, x) => name.includes(x)
+            },
+            {
+                id: 8,
+                name: "malè",
+                akImaj: false,
+                description: "lorem ipsum",
+                correctOption: (name, x) => name.includes(x)
+            },
+            {
+                id: 9,
+                name: "boyo",
+                akImaj: false,
+                description: "lorem ipsum",
+                correctOption: (name, x) => name.includes(x)
+            },
+            {
+                id: 10,
+                name: "kòdenn",
+                akImaj: false,
+                description: "lorem ipsum",
+                correctOption: (name, x) => name.includes(x)
+            },
+            {
+                id: 11,
+                name: "adwaz",
+                akImaj: false,
+                description: "lorem ipsum",
+                correctOption: (name, x) => name.includes(x)
+            },
+            {
+                id: 12,
+                name: "falèz",
+                akImaj: false,
+                description: "lorem ipsum",
+                correctOption: (name, x) => name.includes(x)
+            },
+        ]
+    },
+    {
+        title: 'Touche bon wonn nan pou montre kote [ A, a ] ye nan non yo',
+        etap: 'EVALYASYON',
+        opsyon: 'a',
+        akAudio: false,
+        akBoul: true,
+        audio: "etk1",
+        id: 3,
+        dataList: [
+
+            {
+                id: 1,
+                name: "alimet",
+                akImaj: true,
+                description: "lorem ipsum",
+                correctOption: (nom, index, son) => verifyeSilab(nom, index, son)
+            },
+            {
+                id: 2,
+                name: "anana2",
+                akImaj: true,
+                description: "lorem ipsum",
+                correctOption: (nom, index, son) => verifyeSilab(nom, index, son)
+            },
+            {
+                id: 3,
+                name: "kalalou",
+                akImaj: true,
+                description: "lorem ipsum",
+                correctOption: (nom, index, son) => verifyeSilab(nom, index, son)
+            },
+            {
+                id: 4,
+                name: "chokola",
+                akImaj: true,
+                description: "lorem ipsum",
+                correctOption: (nom, index, son) => verifyeSilab(nom, index, son)
+            },
+            {
+                id: 5,
+                name: "pantalon",
+                akImaj: true,
+                description: "lorem ipsum",
+                correctOption: (nom, index, son) => verifyeSilab(nom, index, son)
+            }
+        ]
+    }
+]
 
 const matye = [
     {
@@ -102,3 +256,19 @@ export const listKlasYo = () => {
     return { matye, sekans };
 }
 
+
+
+
+const syllableRegex = /[^aeiouy]*[aeiouy]+(?:[^aeiouy]*$|[^aeiouy](?=[^aeiouy]))?/gi;
+
+function syllabify(words) {
+    return words.match(syllableRegex);
+}
+
+const verifyeSilab = (nom, index, son) => {
+    const arr = [nom].map(syllabify)[0]
+    if (arr[index].includes('an')) {
+        return false
+    }
+    return arr[index].includes(son)
+}

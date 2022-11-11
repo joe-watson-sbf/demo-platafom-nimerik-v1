@@ -7,7 +7,9 @@ export const getImage = (name, extension) => {
 }
 
 
-export const getAudio = (name) => {
-    const audioSrc = require(`../assets/audio/${name}.mp3`);
+export const getAudio = (name, ext) => {
+
+    const extension = ext || 'mp3';
+    const audioSrc = require(`../assets/audio/${name}.${extension}`);
     return audioSrc;
 }

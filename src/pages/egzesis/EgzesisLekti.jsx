@@ -1,79 +1,82 @@
 import React from 'react'
 import { dataEgzesisLeti } from '../../constant'
 import ImajEgzesis from '../../components/ImajEgzesis';
-import { getAudio } from '../../helpers/helper';
+import { useGeneric } from '../../hoooks/useGeneric';
+import { Podyom } from '../../components/Podyom';
+import { AnTetEgzesis } from '../../components/AnTetEgzesis';
+import ListEgzesis from '../../components/ListEgzesis';
+import ReziltaFinal from '../../components/ReziltaFinal';
 
 
 const EgzesisLekti = () => {
 
-    const egzesis = dataEgzesisLeti;
-    const opsyon = dataEgzesisLeti.opsyon;
+    const [gameIsOver, setGameIsOver] = React.useState(false);
 
-    const [chwaIds, setChwaIds] = React.useState([]);
-    const [repons, setReponse] = React.useState({ bon: 0, move: 0 });
+    const { handleResponse, repons, handleResetGame, kantiteSleksyon } = useGeneric()
+    const [egzesisId, setEgzesisId] = React.useState(-1);
+    const [egzesis, setEgzesis] = React.useState(null);
 
+    React.useEffect(() => {
+        if( egzesis?.dataList && kantiteSleksyon === egzesis.dataList.length) {
+            setGameIsOver(true);
+        }else{
+            setGameIsOver(false);
+        }
+    }, [egzesis, kantiteSleksyon, handleResetGame])
+
+    const handleReset=()=>{
+        handleResetGame();
+        setEgzesisId(-1);
+        setEgzesis(null);
+        setGameIsOver(false);
+    }
+
+    React.useEffect(() => {
+        egzesisId>=0 && setEgzesis(dataEgzesisLeti[egzesisId]);
+        egzesisId<0 && setEgzesis(null);
+    }, [egzesisId])
 
     const handleResult = (rezilta, id) => {
-       handleResponse(rezilta, id);
+        handleResponse(rezilta, id);
     }
-
-     
-
-    const handleResponse = (rezilta, id) => {
-        
-        if(!checkIfChoiceAlreadyExist(id)) {
-
-            setChwaIds([...chwaIds, id]);
-
-            rezilta && new Audio(getAudio('yey')).play();
-            !rezilta && new Audio(getAudio('wrong')).play();
-
-            rezilta && setReponse({...repons, bon: (repons.bon + 1)});
-            !rezilta && setReponse({...repons, move: (repons.move + 1)});
-        }
-    }
-
-
-    
-
-    const checkIfChoiceAlreadyExist = (id) => {
-        return chwaIds.includes(id);
-    }
-
 
     return (
         <div className='container'>
 
-            <div className='flex flex-col gap-4 px-5 mb-8'>
-                <div className='p-4  border mb-4 text-center rounded'>
-                    <h1 className='text-2xl text-gray-600'> {egzesis.title} [ {opsyon.toLocaleUpperCase()} ] </h1>
-                    <audio className='audio-element' src={getAudio(egzesis.audio)} controls autoPlay/>
-                </div>
-                
+            {!egzesis && !gameIsOver && <>
+                <h3 className='text-4xl w-full text-amber-600 underline underline-offset-8 text-center mb-10 uppercase'> Lis egzèsis yo</h3>
+                {
+                    dataEgzesisLeti.map((egzesis, index) => {
+                        return <ListEgzesis key={index} tit={egzesis.title} id={index} handleId={setEgzesisId} />
+                    })
+                }
+            </>}
+           
+
+            {egzesis && <div className='flex flex-col gap-4 px-5 mb-8'>
+
+                <AnTetEgzesis akAudio={egzesis.akAudio} etap={egzesis.etap} audioName={egzesis.audio} title={egzesis.title} />
 
                 <div className='flex md:flex-row flex-col gap-4'>
 
-                    <div className='md:p-8 p-2 w-full default-shadow bg-slate-50'>
+                    {!gameIsOver && <div className=' w-full bg-white'>
                         <div className='grid md:grid-cols-3 grid-cols-2 justify-items-center flex-wrap md:gap-4 gap-3'>
                             {egzesis.dataList.map((data, index) => {
                                 return (
-                                    <ImajEgzesis key={index} handleResult={handleResult} data={data} opsyon={opsyon}/>
+                                    <ImajEgzesis key={index} handleResult={handleResult} data={{...data, akBoul: egzesis.akBoul}} opsyon={egzesis.opsyon} />
                                 )
                             })
                             }
                         </div>
-                    </div>
+                    </div>}
 
-                    <div className='p-4 md:w-1/4 w-full bg-gray-100 default-shadow'>
-                        <h1 className='text-xl text-gray-600'> REZILTA CHWA OU YO </h1>
-                        <div className='flex flex-col gap-5 my-5 '>
-                            <span className='block w-40 bg-blue-100 rounded p-3'>Bon Repons: {repons.bon} </span>
-                            <span className='block w-40 bg-red-100 rounded p-3'>Move Repons: {repons.move} </span>
-                        </div>
-                    </div>
+
+                    {!gameIsOver && <Podyom repons={repons} />}
+
+                    {gameIsOver && <ReziltaFinal repons={repons} handleResetGame={handleReset}/>}
 
                 </div>
-            </div>
+            </div>}
         </div>
     )
 }
