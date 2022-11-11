@@ -1,6 +1,5 @@
 {
   "name": "demo-platafom-nimerik-v1",
-  "homepage": "https://joe-watson-sbf.github.io/demo-platafom-nimerik-v1",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -13,6 +12,7 @@
     "react-router-dom": "^6.4.3",
     "react-scripts": "5.0.1",
     "sass": "^1.56.1",
+    "serve": "^14.1.1",
     "web-vitals": "^3.0.4"
   },
   "scripts": {

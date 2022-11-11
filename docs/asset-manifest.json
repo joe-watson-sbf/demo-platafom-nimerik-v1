@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2739284d.css",
+    "main.js": "/static/js/main.de547bb7.js",
+    "static/media/5af.jpg": "/static/media/5af.5d9322ee8d24b37dce9a.jpg",
+    "static/media/6af.jpg": "/static/media/6af.573e793a44feb78ee13f.jpg",
+    "static/media/chokola.png": "/static/media/chokola.6e3156e9a3dba9ddeaaa.png",
+    "static/media/premium_photo-1663108237864-da30e09faab8.avif": "/static/media/premium_photo-1663108237864-da30e09faab8.393a952f1c4fd1bf9dbb.avif",
+    "static/media/etk1.mp3": "/static/media/etk1.ed9a89ff35da77b58a95.mp3",
+    "static/media/paj.png": "/static/media/paj.3110e142396353ecc4ed.png",
+    "static/media/aplikate.png": "/static/media/aplikate.8043d61e36590e4c3ed1.png",
+    "static/media/pantalon.png": "/static/media/pantalon.ea5ba4583cdf53a16dbe.png",
+    "static/media/kalalou.png": "/static/media/kalalou.4672061cce7a3cf5ed8b.png",
+    "static/media/alimet.png": "/static/media/alimet.7db30ff59c9310db7086.png",
+    "static/media/1af.jpg": "/static/media/1af.f19d2363c7fb13af9136.jpg",
+    "static/media/2af.jpg": "/static/media/2af.5b5bc34f74e7992dc533.jpg",
+    "static/media/pilon.png": "/static/media/pilon.09261855131b60ec45b6.png",
+    "static/media/bravo.mpeg": "/static/media/bravo.36cae50b7830b1d5134f.mpeg",
+    "static/media/4af.jpg": "/static/media/4af.56bb43580a4c707e1970.jpg",
+    "static/media/ananas.png": "/static/media/ananas.58a9cde7e39e346ea9e1.png",
+    "static/media/8af.jpg": "/static/media/8af.8fd26046e123e45c01e6.jpg",
+    "static/media/7af.jpg": "/static/media/7af.fa469fc5eb676f0f70da.jpg",
+    "static/media/aranso.png": "/static/media/aranso.7399860471a83c29fe1a.png",
+    "static/media/3af.jpg": "/static/media/3af.e926e63208afdea7042d.jpg",
+    "static/media/anana2.png": "/static/media/anana2.bab52462ead51995a4b4.png",
+    "static/media/9af.jpg": "/static/media/9af.dd8f390e904be290c954.jpg",
+    "static/media/yey.mp3": "/static/media/yey.24328fed35acb7cb75c0.mp3",
+    "static/media/avyon.png": "/static/media/avyon.569240114907f28e8e4f.png",
+    "static/media/wrong.mp3": "/static/media/wrong.8dd91716cbc72e3e737d.mp3",
+    "static/media/undraw_secure_login_pdn4.svg": "/static/media/undraw_secure_login_pdn4.8cdbc08c50b9cfcbefde2ae77fd58826.svg",
+    "static/media/undraw_education_f8ru.svg": "/static/media/undraw_education_f8ru.ad790cae24544e811a4dfa8421427131.svg",
+    "index.html": "/index.html",
+    "main.2739284d.css.map": "/static/css/main.2739284d.css.map",
+    "main.de547bb7.js.map": "/static/js/main.de547bb7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2739284d.css",
+    "static/js/main.de547bb7.js"
+  ]
+}
