@@ -14,7 +14,7 @@ const App = () => {
 
     const { currentUser } = useContext(AuthContext)
     const RequireAuth = ({ children }) => {
-        return currentUser ? children : <Navigate to={baseURL + "/login"} />;
+        return currentUser ? children : <Navigate to={"/login"} />;
     };
 
     
@@ -23,10 +23,10 @@ const App = () => {
             <BrowserRouter>
                 <Routes>
 
-                    <Route path={baseURL + '/login'} element={<Login />} />
+                    <Route path={'login'} element={<Login />} />
                     <Route path='*' element={<Login />} />
-                    <Route path={baseURL} element={<RequireAuth>  <Home /> </RequireAuth>} />
-                    <Route path={baseURL + '/1e-af'}>
+                    <Route path={''} element={<RequireAuth>  <Home /> </RequireAuth>} />
+                    <Route path={'1e-af'}>
                         <Route index element={<RequireAuth> <JenerikPaj btnText={'Al Nan Klas La'} kle={'matye'} displayColumn title='MATYÈ YO' klas={'1e AF'} /> </RequireAuth> } />
                         <Route path='kominikasyon-kreyol' >
                             <Route index element={<RequireAuth> <JenerikPaj kle={'sekans'} btnText={'Al Nan Egzèsis Yo'} displayColumn={true} klas={'1e AF'} title='SEKANS YO' /> </RequireAuth> } />
@@ -40,11 +40,11 @@ const App = () => {
                         <Route path='syans-esperimantal' element={<RequireAuth> <EgzesisLayout><h1 className='W-100 text-center p-12'>Syans esperimantal</h1></EgzesisLayout> </RequireAuth> } />
                     </Route>
 
-                    <Route path={baseURL + '/2e-af'} element={<RequireAuth> <JenerikPaj klas={'2e AF'} title='MATYÈ YO'> <h1 className='W-100 text-center p-12'>2E AF</h1> </JenerikPaj> </RequireAuth> } />
-                    <Route path={baseURL + '/3e-af'} element={<RequireAuth> <JenerikPaj klas={'3e AF'} title='MATYÈ YO'> <h1 className='W-100 text-center p-12'>3E AF</h1> </JenerikPaj> </RequireAuth> } />
+                    <Route path={'2e-af'} element={<RequireAuth> <JenerikPaj klas={'2e AF'} title='MATYÈ YO'> <h1 className='W-100 text-center p-12'>2E AF</h1> </JenerikPaj> </RequireAuth> } />
+                    <Route path={'3e-af'} element={<RequireAuth> <JenerikPaj klas={'3e AF'} title='MATYÈ YO'> <h1 className='W-100 text-center p-12'>3E AF</h1> </JenerikPaj> </RequireAuth> } />
                     <Route path={baseURL +'/4e-af' }element={<RequireAuth> <JenerikPaj klas={'4e AF'} title='MATYÈ YO'> <h1 className='W-100 text-center p-12'>4E AF</h1> </JenerikPaj> </RequireAuth> } />
-                    <Route path={baseURL + '/5e-af'} element={ <RequireAuth> <JenerikPaj klas={'5e AF'} title='MATYÈ YO'> <h1 className='W-100 text-center p-12'>5E AF</h1> </JenerikPaj> </RequireAuth> }/>
-                    <Route path={baseURL + '/6e-af'} element={<RequireAuth> <JenerikPaj klas={'6e AF'} title='MATYÈ YO'> <h1 className='W-100 text-center p-12'>6E AF</h1> </JenerikPaj> </RequireAuth> } />
+                    <Route path={'5e-af'} element={ <RequireAuth> <JenerikPaj klas={'5e AF'} title='MATYÈ YO'> <h1 className='W-100 text-center p-12'>5E AF</h1> </JenerikPaj> </RequireAuth> }/>
+                    <Route path={'6e-af'} element={<RequireAuth> <JenerikPaj klas={'6e AF'} title='MATYÈ YO'> <h1 className='W-100 text-center p-12'>6E AF</h1> </JenerikPaj> </RequireAuth> } />
                     <Route path='*' element={ <RequireAuth> <JenerikPaj> <h1 className='W-100 text-center p-12'>PAJ SA A POKO KREYE</h1> </JenerikPaj> </RequireAuth> } />
                 </Routes>
 

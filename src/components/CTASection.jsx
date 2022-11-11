@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { TiArrowBack } from 'react-icons/ti'
 import { AuthContext } from '../context/AuthContext'
-import { baseURL } from '../constant'
+
 
 export const CTASection = ({ title, subTitle }) => {
     const { dispatch } = useContext(AuthContext)
@@ -20,7 +20,7 @@ export const CTASection = ({ title, subTitle }) => {
         dispatch({
             type: 'LOGOUT',
         })
-        navigate(baseURL + '/login')
+        navigate('/login')
     }
 
     return (
@@ -51,7 +51,7 @@ export const CTASection = ({ title, subTitle }) => {
 
             </div>
 
-           {pathName !== baseURL && <div className=' px-4 py-2 bg-white'>
+           {pathName !== '/' && <div className=' px-4 py-2 bg-white'>
                 
                 <p onClick={handBack} className="flex py-4 cursor-pointer w-28 items-center">
                     <TiArrowBack/><span className='mx-2 underline-offset-8 uppercase font-bold hover:text-gray-800 text-xs text-gray-500'> Retounen</span>

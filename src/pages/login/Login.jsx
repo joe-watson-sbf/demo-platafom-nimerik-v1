@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import LoginIcon from '../../assets/svgs/undraw_education_f8ru.svg'
 import { AuthContext } from '../../context/AuthContext'
 import LoginIcon1 from '../../assets/svgs/undraw_secure_login_pdn4.svg'
-import { baseURL } from '../../constant'
+
 
 const user = {email:'admin@test.com', password:'testadmin22'}
 const Login = () => {
@@ -18,13 +18,12 @@ const Login = () => {
 
     useEffect(() => {
         if (currentUser) {
-            navigate(baseURL)
+            navigate('/')
         }
     }, [currentUser, navigate])
 
     const handleSubmit = (event) => {
         event.preventDefault()
-        console.log(email, password)
         
         password !== user.password ? setErrorPassd(true) : setErrorPassd(false)
         email !== user.email ? setErrorEmail(true) : setErrorEmail(false)
@@ -34,7 +33,7 @@ const Login = () => {
                 type: 'LOGIN',
                 payload: user
             })
-            navigate(baseURL)
+            navigate('/')
         }
     }
 
