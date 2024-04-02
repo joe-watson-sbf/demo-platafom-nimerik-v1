@@ -1,6 +1,6 @@
 # PLATFÒM NIMERIK
 
-# [Demo Platfòm Nimerik](https://platfom-nimerik.web.app/)
+# [Demo Platfòm Nimerik](https://platafom-nimerik.vercel.app/login)
 
  ## Email 
     
